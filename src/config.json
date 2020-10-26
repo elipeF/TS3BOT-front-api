@@ -1,0 +1,17 @@
+{
+    "commands": [
+        "commandPing",
+        "commandPwAll",
+        "commandPokeAll"
+    ],
+    "functions": [
+        "doChannelsCheck",
+        "doNicknameCheck",
+        "doServerEdit"
+    ],
+    "events": [
+        "getPrivateChannel",
+        "getWelcomeMessage",
+        "getAdminPoke"
+    ]
+}
