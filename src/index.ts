@@ -214,6 +214,14 @@ app.listen(PORT, async () => {
   
     teamspeak.on("ready", async () => {
       console.log("[teamspeak]: Connected to teamspeak server");
+      if(process.env.CID) {
+        try {
+          const me = await teamspeak.whoami();
+          await teamspeak.clientMove(me.clientId, process.env.CID);
+        } catch(e) {
+          console.log('[teamspeak]: Unable to change channel');
+        }
+      }
       resolve()
     });
   
